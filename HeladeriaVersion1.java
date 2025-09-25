@@ -9,12 +9,12 @@ public class HeladeriaVersion1 {
 
     public static void main(String[] args) {
         String[] opciones = {
-                "🍦 Agregar un helado al menú",
-                "📋 Ver todos los helados disponibles",
-                "✏️ Modificar un helado del menú",
-                "🗑️ Quitar un helado del menú",
-                "🔎 Buscar un helado especial",
-                "🚪 Salir de la heladería"
+                " Agregar un helado al menú",
+                " Ver todos los helados disponibles",
+                " Modificar un helado del menú",
+                " Quitar un helado del menú",
+                " Buscar un helado especial",
+                " Salir de la heladería"
         };
 
         mostrarMenu("HELADERÍA LA DULZURA", opciones);
@@ -38,19 +38,19 @@ public class HeladeriaVersion1 {
                 listarHelados();
                 break;
             case 3:
-                System.out.println("✏️ Función de editar aún en construcción...");
+                System.out.println(" Función de editar aún en construcción...");
                 break;
             case 4:
-                System.out.println("🗑️ Función de borrar aún en construcción...");
+                System.out.println(" Función de borrar aún en construcción...");
                 break;
             case 5:
-                System.out.println("🔎 Función de buscar aún en construcción...");
+                System.out.println(" Función de buscar aún en construcción...");
                 break;
             case 6:
-                System.out.println("👋 Gracias por visitar la heladería. ¡Vuelve pronto!");
+                System.out.println(" Gracias por visitar la heladería. ¡Vuelve pronto!");
                 return;
             default:
-                System.out.println("❌ Opción no válida.");
+                System.out.println(" Opción no válida.");
         }
 
         // Recursividad: volver al menú principal
@@ -59,7 +59,7 @@ public class HeladeriaVersion1 {
 
     // Submenú para agregar un helado
     public static void agregarHelado() {
-        System.out.println("\n🍧 ¡Vamos a crear tu helado especial!");
+        System.out.println("\n ¡Vamos a crear tu helado especial!");
 
         // Sección 1: Tipo de helado
         String[] tipos = {"Cono", "Copa", "Vaso", "Banana Split", "Helado Gourmet"};
@@ -76,9 +76,9 @@ public class HeladeriaVersion1 {
         // Guardamos el helado en el inventario
         if (totalHelados < helados.length) {
             helados[totalHelados++] = tipos[tipo] + " de " + sabores[sabor] + " con " + acomp[acompSel];
-            System.out.println("✅ Helado agregado al menú: " + helados[totalHelados-1]);
+            System.out.println(" Helado agregado al menú: " + helados[totalHelados-1]);
         } else {
-            System.out.println("❌ No se pueden agregar más helados, inventario lleno.");
+            System.out.println(" No se pueden agregar más helados, inventario lleno.");
         }
     }
 
@@ -93,7 +93,7 @@ public class HeladeriaVersion1 {
         input.nextLine();
 
         if (opcion < 0 || opcion >= opciones.length) {
-            System.out.println("❌ Opción inválida, inténtalo de nuevo.");
+            System.out.println(" Opción inválida, inténtalo de nuevo.");
             return seleccionarOpcion(titulo, opciones); // recursividad si se equivoca
         }
 
@@ -103,10 +103,10 @@ public class HeladeriaVersion1 {
     // Listar todos los helados
     public static void listarHelados() {
         if (totalHelados == 0) {
-            System.out.println("📭 No hay helados en el menú todavía.");
+            System.out.println(" No hay helados en el menú todavía.");
             return;
         }
-        System.out.println("\n📋 Carta de Helados:");
+        System.out.println("\n Carta de Helados:");
         for (int i = 0; i < totalHelados; i++) {
             System.out.println((i + 1) + ". " + helados[i]);
         }
