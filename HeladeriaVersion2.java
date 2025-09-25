@@ -26,9 +26,9 @@ class HeladeriaBackEnd {
     public void crearHelado(String tipo, String sabor, String acompanamiento) {
         if (total < MAX_HELADOS) {
             inventario[total++] = new Helado(tipo, sabor, acompanamiento);
-            System.out.println("✅ Helado creado exitosamente.");
+            System.out.println(" Helado creado exitosamente.");
         } else {
-            System.out.println("❌ Inventario lleno.");
+            System.out.println(" Inventario lleno.");
         }
     }
 
@@ -45,7 +45,7 @@ class HeladeriaBackEnd {
     public void editarHelado(int index, String tipo, String sabor, String acompanamiento) {
         if (index >= 0 && index < total) {
             inventario[index] = new Helado(tipo, sabor, acompanamiento);
-            System.out.println("✏️ Helado editado correctamente.");
+            System.out.println(" Helado editado correctamente.");
         } else {
             System.out.println("Índice inválido.");
         }
@@ -67,7 +67,7 @@ class HeladeriaBackEnd {
         boolean encontrado = false;
         for (int i = 0; i < total; i++) {
             if (inventario[i].tipo.equalsIgnoreCase(tipo)) {
-                System.out.println("🔎 Encontrado: " + inventario[i]);
+                System.out.println(" Encontrado: " + inventario[i]);
                 encontrado = true;
             }
         }
